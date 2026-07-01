@@ -1,1 +1,0 @@
-function startMusic(){music.play()}const s=new Date('2023-01-01');setInterval(()=>counter.textContent=Math.floor((Date.now()-s)/86400000)+' días juntos ❤️',1000)
