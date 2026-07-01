@@ -1,0 +1,879 @@
+/*====================================================
+        ALVARO ❤️ LUCIANA
+        STYLE.CSS
+====================================================*/
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --black:#050505;
+    --black2:#101010;
+
+    --gold:#d4af37;
+    --gold2:#f4d77d;
+
+    --red:#b11226;
+    --red2:#ff3b5c;
+
+    --white:#ffffff;
+    --gray:#d7d7d7;
+
+}
+
+body{
+
+    background:var(--black);
+
+    color:var(--white);
+
+    font-family:"Montserrat",sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/*====================================================
+                FONDO
+====================================================*/
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        radial-gradient(circle at 10% 20%,white 1px,transparent 2px),
+        radial-gradient(circle at 40% 60%,white 2px,transparent 3px),
+        radial-gradient(circle at 80% 30%,white 2px,transparent 4px),
+        radial-gradient(circle at 70% 80%,white 1px,transparent 2px),
+        radial-gradient(circle at 20% 90%,white 2px,transparent 3px);
+
+    background-size:350px 350px;
+
+    animation:starsMove 120s linear infinite;
+
+    opacity:.35;
+
+    z-index:-2;
+
+}
+
+@keyframes starsMove{
+
+    from{
+
+        background-position:0 0;
+
+    }
+
+    to{
+
+        background-position:1000px -700px;
+
+    }
+
+}
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+/*====================================================
+                CONTENEDORES
+====================================================*/
+
+.container{
+
+    width:min(1180px,90%);
+
+    margin:auto;
+
+}
+
+.section{
+
+    padding:120px 0;
+
+}
+
+h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:3.2rem;
+
+    text-align:center;
+
+    color:var(--gold);
+
+}
+
+.divider{
+
+    width:120px;
+
+    height:4px;
+
+    margin:25px auto 60px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        90deg,
+        var(--gold),
+        var(--red)
+    );
+
+}
+
+p{
+
+    line-height:1.9;
+
+    color:var(--gray);
+
+}
+
+/*====================================================
+                HERO
+====================================================*/
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.hero-image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    filter:brightness(.38);
+
+    transform:scale(1.08);
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        rgba(0,0,0,.25),
+
+        rgba(0,0,0,.70),
+
+        rgba(0,0,0,.95)
+
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+    width:min(900px,90%);
+
+    text-align:center;
+
+}
+
+.tag{
+
+    display:inline-block;
+
+    padding:8px 20px;
+
+    border:1px solid rgba(212,175,55,.4);
+
+    border-radius:50px;
+
+    color:var(--gold);
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    margin-bottom:25px;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+.hero h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(3.5rem,8vw,7rem);
+
+    margin-bottom:20px;
+
+}
+
+.heart{
+
+    color:var(--red2);
+
+    animation:heartBeat 2s infinite;
+
+}
+
+@keyframes heartBeat{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.18);
+
+    }
+
+}
+
+.hero-text{
+
+    font-size:1.25rem;
+
+    max-width:720px;
+
+    margin:25px auto;
+
+}
+
+.hero-date{
+
+    color:var(--gold);
+
+    font-size:1.2rem;
+
+    margin:35px 0;
+
+}
+
+#startButton{
+
+    padding:18px 50px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        45deg,
+        var(--red),
+        var(--gold)
+    );
+
+    color:white;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 0 25px rgba(212,175,55,.35);
+
+}
+
+#startButton:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 40px rgba(212,175,55,.60);
+
+}
+/*====================================================
+                INTRO
+====================================================*/
+
+.intro-text{
+
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
+    font-size:1.2rem;
+
+    line-height:2;
+
+}
+
+/*====================================================
+                CONTADOR
+====================================================*/
+
+#counter{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.box{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:22px;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.box:hover{
+
+    transform:translateY(-10px);
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 35px rgba(212,175,55,.25);
+
+}
+
+.box span{
+
+    display:block;
+
+    font-size:3.5rem;
+
+    font-family:"Cormorant Garamond",serif;
+
+    color:var(--gold);
+
+    margin-bottom:10px;
+
+}
+
+.box small{
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    color:#d7d7d7;
+
+}
+
+/*====================================================
+                TIMELINE
+====================================================*/
+
+.timeline{
+
+    position:relative;
+
+    max-width:950px;
+
+    margin:auto;
+
+    padding:30px 0;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:0;
+
+    transform:translateX(-50%);
+
+    width:4px;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        var(--gold),
+
+        var(--red)
+
+    );
+
+    border-radius:20px;
+
+}
+
+.timeline-item{
+
+    width:50%;
+
+    padding:25px;
+
+    position:relative;
+
+}
+
+.timeline-item.left{
+
+    left:0;
+
+}
+
+.timeline-item.right{
+
+    left:50%;
+
+}
+
+.timeline-card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(212,175,55,.20);
+
+    border-radius:20px;
+
+    padding:30px;
+
+    transition:.35s;
+
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 30px rgba(212,175,55,.25);
+
+}
+
+.timeline-date{
+
+    color:var(--red2);
+
+    font-weight:bold;
+
+    display:block;
+
+    margin-bottom:15px;
+
+}
+
+.timeline-card h3{
+
+    color:var(--gold);
+
+    margin-bottom:15px;
+
+    font-size:1.6rem;
+
+}
+
+.timeline-card p{
+
+    color:#d8d8d8;
+
+}
+
+/* Círculos sobre la línea */
+
+.timeline-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:45px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    box-shadow:0 0 15px rgba(212,175,55,.7);
+
+}
+
+.timeline-item.left::after{
+
+    right:-9px;
+
+}
+
+.timeline-item.right::after{
+
+    left:-9px;
+
+}
+/*====================================================
+                    GALERÍA
+====================================================*/
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:28px;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    height:380px;
+
+    object-fit:cover;
+
+    border-radius:22px;
+
+    cursor:pointer;
+
+    border:2px solid rgba(212,175,55,.20);
+
+    transition:all .45s ease;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.05) rotate(.5deg);
+
+    border-color:var(--gold);
+
+    box-shadow:0 20px 45px rgba(212,175,55,.35);
+
+}
+
+/*====================================================
+                    CARTA
+====================================================*/
+
+.letter{
+
+    max-width:900px;
+
+    margin:auto;
+
+    background:linear-gradient(
+
+        180deg,
+
+        rgba(28,28,28,.96),
+
+        rgba(12,12,12,.98)
+
+    );
+
+    border:1px solid rgba(212,175,55,.25);
+
+    border-radius:25px;
+
+    padding:60px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+.letter p{
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+.letter h3{
+
+    text-align:center;
+
+    color:var(--gold);
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2.3rem;
+
+    margin:40px 0;
+
+}
+
+.firma{
+
+    text-align:right;
+
+    margin-top:50px;
+
+    color:var(--gold);
+
+}
+
+/*====================================================
+                MENSAJE FINAL
+====================================================*/
+
+.final-text{
+
+    max-width:850px;
+
+    margin:25px auto;
+
+    text-align:center;
+
+    font-size:1.2rem;
+
+}
+
+.final-heart{
+
+    text-align:center;
+
+    font-size:5rem;
+
+    margin:50px 0;
+
+    animation:pulseHeart 2s infinite;
+
+}
+
+@keyframes pulseHeart{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.20);
+
+    }
+
+}
+
+.final-message{
+
+    text-align:center;
+
+    color:var(--gold);
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2.5rem;
+
+}
+
+/*====================================================
+                    FOOTER
+====================================================*/
+
+footer{
+
+    padding:45px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    color:#999;
+
+    background:#040404;
+
+}
+
+/*====================================================
+                APARICIÓN AL HACER SCROLL
+====================================================*/
+
+.section{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:1s;
+
+}
+
+.section.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*====================================================
+                    LIGHTBOX
+====================================================*/
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.95);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.4s;
+
+    z-index:9999;
+
+    cursor:pointer;
+
+}
+
+.lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:20px;
+
+    border:3px solid var(--gold);
+
+    box-shadow:0 0 50px rgba(212,175,55,.5);
+
+}
+
+/*====================================================
+                RESPONSIVE
+====================================================*/
+
+@media(max-width:900px){
+
+.timeline::before{
+
+    left:25px;
+
+}
+
+.timeline-item{
+
+    width:100%;
+
+    left:0 !important;
+
+    padding-left:70px;
+
+}
+
+.timeline-item::after{
+
+    left:16px !important;
+
+}
+
+.hero h1{
+
+    font-size:3.5rem;
+
+}
+
+.section{
+
+    padding:90px 20px;
+
+}
+
+.letter{
+
+    padding:35px;
+
+}
+
+.gallery img{
+
+    height:300px;
+
+}
+
+}
