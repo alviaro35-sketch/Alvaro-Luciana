@@ -880,3 +880,16 @@ img {
 
   height: auto !important;
 }
+@media (max-width: 900px){
+
+.gallery{
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.gallery img{
+    height: auto;
+    aspect-ratio: 4/5;
+}
+
+}
